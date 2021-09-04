@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgb(35, 2, 66);
+    min-height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: white;
+    position: relative;
+}
+footer{
+    color: whitesmoke;
+    font-family: 'Courgette', cursive;
+    position: absolute;
+    bottom: 5vh;
+}
+.content{
+    min-height: 80vh;
+}
+header :not(.pianoEmoji){
+    color: whitesmoke;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+    /* font-size: larger; */
+    text-shadow: 2px 2px 5px rgb(192, 11, 153);
+}
+.piano{
+    display: flex;
+}
+.white{
+    background-color: whitesmoke;
+    border: 1px solid #333;
+    --width: 80px;
+    /* height: 320px; */
+    /* height: calc(var(--width)*4); */
+}
+.black{
+    background-color: black;
+    --width: 48px;
+    /* height: 192px; */
+    /* height: calc(var(--width)*4); */
+    z-index: 2;
+    margin-left: calc(var(--width)*-1/2);
+    margin-right: calc(var(--width)*-1/2);
+}
+.key{
+    height: calc(var(--width)*4);
+    width:  var(--width);
+    
+}
+.white.animation{
+    background-color: #CCC;
+}
+.black.animation{
+    background-color: #333;
+}
+@media screen and (max-width: 650px){
+    .white{
+        width: 55px;
+        height: 220px;
+    }
+    .black{
+        width: 33px;
+        height: 132px;
+        margin-left: -16.5px;
+        margin-right: -16.5px;
+    }
+}
+@media screen and (max-width: 400px){
+    .white{
+        width: 40px;
+        height: 160px;
+    }
+    .black{
+        width: 24px;
+        height: 96px;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+}
